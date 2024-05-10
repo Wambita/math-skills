@@ -33,8 +33,8 @@ You need to have Go installed on your system to run this program. Go can be down
 To set up the project on your local machine, follow these steps:
 
 ```bash
-git clone https://example.com/your-repository-url.git
-cd your-project-directory
+git clone https://learn.zone01kisumu.ke/git/shfana/math-skills
+cd math-skills
 ```
 # Usage
 
