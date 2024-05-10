@@ -2,6 +2,7 @@ package mathskills
 
 import "testing"
 
+// testing for variance function , compare  output to expected input
 func TestCalcVariance(t *testing.T) {
 	tests := []struct {
 		input    []float64

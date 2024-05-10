@@ -2,6 +2,7 @@ package mathskills
 
 import "testing"
 
+//testing for median function , compare  output to expected input
 func TestCalcMedian(t *testing.T) {
 	tests := []struct {
 		input    []float64

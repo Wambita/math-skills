@@ -2,6 +2,7 @@ package mathskills
 
 import "testing"
 
+//testing for standard deviation function , compare  output to expected input
 func TestCalcStdDev(t *testing.T) {
 	tests := []struct {
 		variance float64

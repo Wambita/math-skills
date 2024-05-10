@@ -20,13 +20,12 @@ func OpenFile(filePath string) ([]float64, error) {
 		line := scanner.Text()
 		num, err := strconv.ParseFloat(line, 64)
 		if err != nil {
-			return nil, fmt.Errorf("Could not convert string to float: %v", err)
+			return nil, fmt.Errorf("could not convert string to float: %v", err)
 		}
 		data = append(data, num)
 	}
 	if err := scanner.Err(); err != nil {
 		return nil, err
 	}
-	fmt.Println(data)
 	return data, nil
 }
