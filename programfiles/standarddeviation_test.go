@@ -2,7 +2,7 @@ package mathskills
 
 import "testing"
 
-//testing for standard deviation function , compare  output to expected input
+// testing for standard deviation function , compare  output to expected input
 func TestCalcStdDev(t *testing.T) {
 	tests := []struct {
 		variance float64
@@ -15,7 +15,7 @@ func TestCalcStdDev(t *testing.T) {
 	for _, test := range tests {
 		output := CalcStdDev(test.variance)
 		if output != test.expected {
-			t.Errorf("calculate Variance(%v) = %v; Expected %v", test.variance, output, test.expected)
+			t.Errorf("calculate standard deviation(%v) = %v; Expected %v", test.variance, output, test.expected)
 		}
 	}
 }

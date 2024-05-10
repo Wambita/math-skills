@@ -2,7 +2,7 @@ package mathskills
 
 import "testing"
 
-//testing for median function , compare  output to expected input
+// testing for median function , compare  output to expected input
 func TestCalcMedian(t *testing.T) {
 	tests := []struct {
 		input    []float64
@@ -15,7 +15,7 @@ func TestCalcMedian(t *testing.T) {
 	for _, test := range tests {
 		output := CalcMedian(test.input)
 		if output != test.expected {
-			t.Errorf("calculateAverage(%v) = %v; Expected %v", test.input, output, test.expected)
+			t.Errorf("calculate median(%v) = %v; Expected %v", test.input, output, test.expected)
 		}
 	}
 }
