@@ -17,7 +17,8 @@ func main() {
 	// calculate median and round it safely checking for overflows
 	median, err := mathskills.SafeRound(mathskills.CalcMedian(data))
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("Error calculating median: %v\n", err)
+		return
 	}
 
 	// calculate variance and keep it as float for accurate calculations
@@ -26,18 +27,21 @@ func main() {
 	// claculate median and round it safely
 	standarddeviation, err := mathskills.SafeRound(mathskills.CalcStdDev(variance))
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("Error calculating standard deviation: %v\n", err)
+		return
 	}
 
 	// round the average safely
 	roundedAverage, err := mathskills.SafeRound(average)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("Error calculating average: %v\n", err)
+		return
 	}
 	// round the variance safely
 	roundedVariance, err := mathskills.SafeRound(variance)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("Error calculating variance: %v\n", err)
+		return
 	}
 
 	// Print all values to the nearest integer
