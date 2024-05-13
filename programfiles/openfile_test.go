@@ -1,6 +1,8 @@
 package mathskills
 
 import (
+	"fmt"
+	"os"
 	"path/filepath"
 	"testing"
 )
@@ -28,5 +30,17 @@ func TestWrongExtension(t *testing.T) {
 	inputFilepath := "untitled.png"
 	if filepath.Ext(inputFilepath) == ".txt" {
 		t.Errorf("Error: file has .txt expected wrong filepath")
+	}
+}
+
+// test for empty file
+func TestEmptyfile(t *testing.T) {
+	inputFilepath := "empty.txt"
+	fileinfo, err := os.Stat(inputFilepath)
+	if fileinfo.Size() != 0 {
+		t.Errorf("Expected error for empty file, found none")
+	}
+	if err != nil {
+		fmt.Println("Error: ", err)
 	}
 }
