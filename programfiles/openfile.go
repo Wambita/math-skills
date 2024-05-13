@@ -32,7 +32,7 @@ func OpenFile(filePath string) ([]float64, error) {
 	for scanner.Scan() {
 		line := scanner.Text()
 		num, err := strconv.ParseFloat(line, 64)
-		if num > float64(math.MaxInt64) {
+		if num >= float64(math.MaxInt64) {
 			return nil, fmt.Errorf("value out of int64 range")
 		}
 		if num < 0 {

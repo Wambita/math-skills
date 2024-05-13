@@ -19,9 +19,12 @@ func main() {
 	// open  data file
 	data, err := mathskills.OpenFile(filePath)
 	if filepath.Ext(filePath) != ".txt" {
-		fmt.Println("wrong file name: Usage go run . data.txt")
+		fmt.Println("wrong file extension: Usage go run . data.txt")
 		return
+	}
 
+	if filePath != "data.txt" {
+		fmt.Println("wrong file name: Usage go run . data.txt")
 	}
 	if err != nil {
 		fmt.Printf("Error: %v", err)
