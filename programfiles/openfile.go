@@ -42,15 +42,13 @@ func OpenFile(filePath string) ([]float64, error) {
 		if num >= float64(math.MaxInt64) {
 			return nil, fmt.Errorf("value out of int64 range")
 		}
+
 		if num < 0 {
 			return nil, fmt.Errorf("population cannot have a negative value")
 		}
 
 		data = append(data, num)
 
-	}
-	if len(data) < 2 {
-		return nil, fmt.Errorf("population must have more than 1 value")
 	}
 	return data, nil
 }
