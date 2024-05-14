@@ -31,16 +31,21 @@ func OpenFile(filePath string) ([]float64, error) {
 	scanner := bufio.NewScanner(inputFile)
 	for scanner.Scan() {
 		line := scanner.Text()
+		if line == "" {
+			continue
+		}
 		num, err := strconv.ParseFloat(line, 64)
+		if err != nil {
+			return nil, fmt.Errorf("error: %v", err)
+		}
+
 		if num >= float64(math.MaxInt64) {
 			return nil, fmt.Errorf("value out of int64 range")
 		}
 		if num < 0 {
 			return nil, fmt.Errorf("population cannot have a negative value")
 		}
-		if err != nil {
-			return nil, fmt.Errorf("error: %v", err)
-		}
+
 		data = append(data, num)
 
 	}

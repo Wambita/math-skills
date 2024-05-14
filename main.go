@@ -27,7 +27,7 @@ func main() {
 		fmt.Println("wrong file name: Usage go run . data.txt")
 	}
 	if err != nil {
-		fmt.Printf("Error: %v", err)
+		fmt.Println("Error:", err)
 		return
 	}
 
