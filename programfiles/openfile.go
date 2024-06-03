@@ -50,5 +50,12 @@ func OpenFile(filePath string) ([]float64, error) {
 		data = append(data, num)
 
 	}
+
+	if len(data) == 0 {
+		return nil, fmt.Errorf("file contains empty lines")
+	}
+	if len(data) == 1 {
+		return nil, fmt.Errorf("cannot populate one value")
+	}
 	return data, nil
 }
