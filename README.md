@@ -1,11 +1,11 @@
-# math-skills
+# MATH-SKILLS
 
 ## Overview
 This Go program calculates essential statistical measures such as Average, Median, Variance, and Standard Deviation from a dataset provided in a text file. Each line of the file represents an individual data point of a statistical population.
 
 ### Instructions
 The program reads from a file and print the result of each statistic . The program reads the data present in the path passed as argument. The data in the file will be presented as the following example:
-
+```
 189
 113
 121
@@ -13,6 +13,7 @@ The program reads from a file and print the result of each statistic . The progr
 145
 110
 ...
+```
 
 This data represents a statistical population: each line contains one value.
 
@@ -104,7 +105,7 @@ ok      mathskills 0.005s
 Contributions are welcome. Please ensure your code adheres to the existing style and includes tests where applicable.
  
  ## License 
- This project is protected under the MIT Licence. See the license for details
+ This project is protected under the MIT Licence. See the [license](LICENSE) for details
 
  ## Author
  This project was created by [shfana](https://github.com/Wambita)
